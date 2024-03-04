@@ -1,71 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Poppins&display=swap" rel="stylesheet">
-    <title>Quiz</title>
+    <title>Wow Quiz</title>
 </head>
 <body>
    
-            <div class="global">
-                    <form class="form-quiz">
-                        <h1>Quiz</h1>
-
-                        <div class="question">
-                            <h3>quel est ton chiffre parmis la liste</h3>
-
-                            <div class="quiz">                                
-                                <input type="radio" id="1" name="q1" value="a" checked>
-                                <label for="1">1</label>
+            <div class="container">
+                <h1>Quiz sur World of Warcraft !</h1>
+                <form class="quizz-form">
+                    <div class="container-question">
+                        <!--questionUN-->
+                        <div class="box-question ">
+                            <div class="bg">QUESTION 1</div>
+                            <h4>quelle est la capitale de la france</h4>
+                            <div>
+                                <input type="radio" name="q1" id="berlin" value="a" checked>
+                                <label for="$berlin">Berlin</label>
                             </div>
-                            <div class="quiz">                                
-                                <input type="radio" id="2" name="q1" value="b" >
-                                <label for="2">2</label>
+                            <div>
+                                <input type="radio" name="q1" id="paris" value="b">
+                                <label for="$paris">Paris</label>
                             </div>
-                            <div class="quiz">                                
-                                <input type="radio" id="3" name="q1" value="c" >
-                                <label for="3">3</label>
+                            <div>
+                                <input type="radio" name="q1" id="monaco" value="c">
+                                <label for="$monaco">Monaco</label>
                             </div>
-
+                            <div>
+                                <input type="radio" name="q1" id="londre" value="d">
+                                <label for="$londre">Londre</label>
+                            </div>
                         </div>
-
-                        <div class="question">
-                            <h3>quel est ton chiffre parmis la liste</h3>
-
-                            <div class="quiz">                                
-                                <input type="radio" id="4" name="q2" value="a" checked >
-                                <label for="4">4</label>
-                            </div>
-                            <div class="quiz">                                
-                                <input type="radio" id="5" name="q2" value="b" >
-                                <label for="5">5</label>
-                            </div>
-                            <div class="quiz">                                
-                                <input type="radio" id="6" name="q2" value="c" >
-                                <label for="6">6</label>
-                            </div>
-
-                        </div>
-
-                        <button type="submit">validez</button>
-                    </form>
-
-                    <div class="resultats">
-                        <h2>check les resultats</h2>
-
-                        <p class="aide">
-
-                        </p>
-                        
-                        <p class="note">
-
-                        </p>
                     </div>
+                </form>    
             </div>
-
 
         <script src="script.js"></script>
 </body>
