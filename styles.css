@@ -9,7 +9,7 @@ body{
     width: 100%;
     height: auto;
     margin: 0 auto;
-    background: linear-gradient(rgba(0, 0, 0, 0.743), rgba(0, 0, 0, 0.521)), url(/asset/img/backgroudn.jpeg) no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.743), rgba(0, 0, 0, 0.521)), url(./asset/img/backgroudn.jpeg) no-repeat center/cover;
     font-family: poppins;
 }
 
@@ -76,7 +76,7 @@ span {
   margin-left: 0.5rem;
 }
 
-.quizz-form{
+.form-quizz{
    width: 100%;
   height: auto;
   display: flex;
@@ -89,24 +89,17 @@ span {
 
 .box-question input[type='radio']{
     transform: scale(1.5);
+}
+
+.result {
+    text-align: center;
+    width: 500px;
+    height: auto;
+    background-color: rgb(204, 140, 11);
+}
+
+.result button {
     
-}
-
-.echec{
-    animation: echec 0.3s ease-in-out;
-}
-
-@keyframes echec {
-    0%{
-        transform: translateX(0px);
-    }
-    33%{
-        transform: translateX(5px);
-    }
-    66%{
-        transform: translateX(-5px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
+    width: 100px;
+    height: 30px;
 }

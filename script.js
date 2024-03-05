@@ -1,37 +1,54 @@
-const form = document.querySelector('.form-quiz');
-let tableauResultats = [];
-const reponse = ['b', 'b'];
-const emojis = ['✅','❌'];
-const titreResultat = document.querySelector('.resultatd h2');
-const textResultat = document.querySelector('.note');
-const aideResultat = document.querySelector('.aide');
-const toutequestion = document.querySelectorAll('.question');
-let veriftableau = []
+
+const reponse = [ "d", "b", "c"];
+const form  = document.querySelector('.form-quizz');
+const result= document.querySelector('.result');
+const noteResult= document.querySelector('.note');
+const infoResult = document.querySelector('.info')
+let  resultTableau = [];
+let veriftableau = [];
+const emojis = ["✅", "❌"];
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    for (let i = 1; i <= 2; i++) {
-        tableauResultats.push(document.querySelector(`input[name="q${i}"]:checked`).value)
-    }
+  for (let i = 1; i < 4; i++) {
+    resultTableau.push(
+      document.querySelector(`input[name = "q${i}"]:checked`)?.value
+    );
+  }
+  verif(resultTableau);
+  resultTableau = []; //Reset le tableau
+});
 
-    //console.log(tableauResultats);
-    verifFunc(tableauResultats)
-    tableauResultats = [];
-}) 
+function verif(resultats) {
 
-function verifFunc(tabResultats) {
-
-    for (let i = 0; i <= 1; i++) {
-        if (tabResultats[i] === reponse[i]) {
-            veriftableau.push(true)
-        } else {
-            veriftableau.push(false)
+      for (let i = 0; i < 3 ; i++) {
+        if(resultats[i] === reponse[i]) {
+          veriftableau.push(true);
+        }else {
+          veriftableau.push(false);
         }
-    }
+      }
 
-    console.log(veriftableau);
-    veriftableau = []
+      console.log(veriftableau)
+      funcResultat(veriftableau);
+    veriftableau = [];
+}
+
+function funcResultat(resul) {
+    const nbError = resul.filter(el => el === false ).length;
+    console.log(nbError)
+
+    switch (nbError) {
+        case 0:
+                result.style.backgroundColor = "green"
+                noteResult.innerText = `✅ bien joué✅`;
+                infoResult.inneText = `3 / 3`
+            break;
+    
+        default:
+            break;
+    }
 }
 
 
