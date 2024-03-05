@@ -6,17 +6,90 @@
 
 
 body{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.743), rgba(0, 0, 0, 0.521)), url(/asset/img/backgroudn.jpeg) no-repeat center/cover;
     font-family: poppins;
-    font-size: 20px;
-    color: white;
-    background-color: rgba(7, 5, 27, 0.918);
 }
 
+h1{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
 
+span {
+    color: rgb(255, 171, 3);
+}
 
+.container {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+}
 
-.question input[type='radio']{
+.bg{
+    color: white;
+}
+
+.container-question {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.box-question{
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: rgb(204, 140, 11);
+  border-radius: 15px;
+}
+
+.box-question img {
+    width: 100%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.956) 0px 4px 12px;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.box-question h4 {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.box-question label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.quizz-form{
+   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.box-question input[type='radio']{
     transform: scale(1.5);
+    
 }
 
 .echec{
